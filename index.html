@@ -11,24 +11,24 @@
     <header>
         <nav>
             <ul class="nav-list">
-                <li class="nav-item" data-destination="home">
+                <li id="nav-home" class="nav-item active">
                     <a href="#home">Home</a>
                 </li>
-                <li class="nav-item active" data-destination="about">
+                <li id="nav-about" class="nav-item">
                     <a href="#about">About me</a>
                 </li>
                 <li class="dropdown nav-item">
                     <a href="">Things I...</a>
                     <ul class="nested-nav-list">
-                        <li class="nav-item">
+                        <li id="nav-cool-things" class="nav-item">
                             <a href="#cool-things">think are cool</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="nav-built-things" class="nav-item">
                             <a href="#built-things">have built</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li id="nav-contact" class="nav-item">
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
@@ -40,18 +40,18 @@
                 <div class="toggle-slider"></div>
             </div>
         </button>
-        <section id="home">
+        <section id="home" data-nav-item="nav-home">
             <h2>Welcome</h2>
             <p>Thank you for visiting my page. My name is Kevin, I am a software developer, artist, and an avid gamer.</p>
             <ul class="interest-list">
                 Here are a few things I am currently interested in:
-                <li><a href="#react">React 18</a></li>
+                <li><a href="#react">React Deep Dive</a></li>
                 <li><a href="#three-d">3d Development with Three.js </a></li>
-                <li><a href="#hunt">Videogames</a></li>
+                <li><a href="#hunt">Video Games</a></li>
             </ul>
         </section>
-        <section id="about">
-            <h2>About</h2>
+        <section id="about" data-nav-item="nav-about">
+            <h2>Who am I</h2>
             <div class="side-by-side">
                 <img src="./public/images/me.png" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium, autem nihil reprehenderit eum eligendi tempore quos vel, cum obcaecati pariatur, ipsum totam repellendus dicta! Nisi, delectus cumque beatae voluptas ratione nam magni laudantium eum ea harum tempora, aliquam perspiciatis voluptatem explicabo quis veritatis incidunt voluptate molestiae quae facere dolor.</p>
@@ -59,8 +59,8 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae suscipit doloribus delectus, incidunt consectetur quae rerum at nam voluptas dolore minus nulla quisquam laboriosam dignissimos.</p>
 
         </section>
-        <section id="cool-things"></section>
-        <section id="built-things">
+        <section id="cool-things" data-nav-item="nav-cool-things"></section>
+        <section id="built-things" data-nav-item="nav-built-things">
             <h2>What I have built or am working on</h2>
             <div class="cards-container">
                 <div class="card">
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" data-nav-item="nav-contact">
             <h2>Get in touch</h2>
         </section>
     </main>
