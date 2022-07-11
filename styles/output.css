@@ -7,6 +7,13 @@ body {
   font-family: sans-serif;
   margin: 0;
   color: #2c2c2c;
+  transition: background-color 0.75s;
+  line-height: 1.4;
+  font-size: 1.2rem;
+}
+body.night-mode {
+  background-color: #000012;
+  color: #e8e3dd;
 }
 
 main {
@@ -35,10 +42,15 @@ ul {
   top: 0;
   width: 100%;
   transition: all 0.25s;
+  z-index: 10;
 }
 .nav-list.active {
   box-shadow: 0 5px 10px rgba(71, 71, 71, 0.553);
   background-color: #fff;
+}
+.night-mode .nav-list.active {
+  background-color: #212121;
+  box-shadow: 0 5px 10px rgba(25, 25, 25, 0.553);
 }
 .nav-list .nav-item {
   list-style: none;
@@ -71,6 +83,47 @@ section {
 }
 section:first-of-type {
   margin-top: 4rem;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 75px;
+  right: 20px;
+  background-color: unset;
+  border: none;
+}
+.mode-toggle .toggle-container {
+  width: 50px;
+  height: 20px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #fbfdff;
+  background-image: url("../public/images/moon-icon.png");
+  background-size: 47%;
+  background-repeat: no-repeat;
+  background-position-x: 28px;
+  background-position-y: center;
+  border: 1px solid #585858;
+}
+.night-mode .mode-toggle .toggle-container {
+  background-image: url("../public/images/sun-icon.png");
+  background-position-x: 1px;
+  background-color: #2f373e;
+  background-size: 40%;
+  border: 1px solid #f3f3f3;
+}
+.mode-toggle .toggle-container .toggle-slider {
+  background-color: #585858;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 60%;
+  transition: all 0.75s;
+}
+.night-mode .mode-toggle .toggle-container .toggle-slider {
+  background-color: #f3f3f3;
+  right: 0;
 }
 
 #home .side-by-side {
@@ -136,6 +189,8 @@ section:first-of-type {
 @media (min-width: 767px) {
   #built-things .cards-container {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 #built-things .cards-container .card {
@@ -155,10 +210,14 @@ section:first-of-type {
   background-color: #d7cfcc;
   box-shadow: 0 5px 9px rgba(71, 71, 71, 0.86);
 }
+.night-mode #built-things .cards-container .card {
+  background-color: rgba(37, 37, 37, 0.7);
+  box-shadow: none;
+}
 @media (min-width: 767px) {
   #built-things .cards-container .card {
     flex-wrap: wrap;
-    max-width: 33%;
+    max-width: 43%;
     margin-top: 0;
   }
 }

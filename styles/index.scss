@@ -7,6 +7,14 @@ body {
     font-family: sans-serif;
     margin: 0;
     color:#2c2c2c;
+    transition: background-color .75s;
+    line-height: 1.4;
+    font-size: 1.2rem;
+
+    &.night-mode {
+        background-color: #000012;
+        color:#e8e3dd;
+    }
 }
 
 main {
@@ -34,10 +42,16 @@ ul {
     top: 0;
     width: 100%;
     transition: all .25s;
+    z-index: 10;
 
     &.active {
         box-shadow: 0 5px 10px rgba(71, 71, 71, 0.553);
         background-color: #fff;
+
+        .night-mode & {
+            background-color: #212121;
+            box-shadow: 0 5px 10px rgba(25, 25, 25, 0.553);
+        }
     }
 
 
@@ -78,6 +92,55 @@ section {
 
     &:first-of-type {
         margin-top: 4rem;
+    }
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    background-color: unset;
+    border: none;
+
+    .toggle-container {
+        width: 50px;
+        height: 20px;
+        border-radius: 15px;
+        position: relative;
+        background-color: rgb(251, 253, 255);
+        background-image: url("../public/images/moon-icon.png");
+        background-size: 47%;
+        background-repeat: no-repeat;
+        background-position-x: 28px;
+        background-position-y: center;
+        border: 1px solid #585858;
+
+        &:hover {
+
+        }
+
+        .night-mode & {
+            background-image: url("../public/images/sun-icon.png");
+            background-position-x: 1px;
+            background-color: rgb(47, 55, 62);
+            background-size: 40%;
+            border: 1px solid #f3f3f3;
+        }
+
+        .toggle-slider {
+            background-color: #585858;
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            right: 60%;
+            transition: all .75s;
+            
+            .night-mode & {
+                background-color: #f3f3f3;
+                right: 0;
+            }
+        }
     }
 }
 
@@ -152,6 +215,8 @@ section {
 
         @media(min-width: 767px){
             flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .card {
@@ -173,9 +238,14 @@ section {
                 box-shadow: 0 5px 9px rgb(71 71 71 / 86%);
             }
 
+            .night-mode & {
+                background-color: rgb(37 37 37 / 70%);
+                box-shadow: none;
+            }
+
             @media(min-width: 767px){
                 flex-wrap: wrap;
-                max-width: 33%;
+                max-width: 43%;
                 margin-top: 0;
             }
 

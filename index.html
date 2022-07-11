@@ -20,29 +20,26 @@
                 <li class="dropdown nav-item">
                     <a href="">Things I...</a>
                     <ul class="nested-nav-list">
-                        <li class="nav-item" data-destination="cool-things">
-                            <a href="cool-things">think are cool</a>
+                        <li class="nav-item">
+                            <a href="#cool-things">think are cool</a>
                         </li>
-                        <li class="nav-item" data-destination="built-things">
-                            <a href="built-things">have built</a>
+                        <li class="nav-item">
+                            <a href="#built-things">have built</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown" data-destination="contact">
-                    <a href="">Contact</a>
-                    <ul class="nested-nav-list">
-                        <li class="nav-item" data-destination="resume">
-                            <a href="#resume">Resume</a>
-                        </li>
-                        <li class="nav-item" data-destination="email">
-                            <a href="#copy">Copy email</a>
-                        </li>
-                    </ul>
+                <li class="nav-item">
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
+        <button class="mode-toggle">
+            <div class="toggle-container">
+                <div class="toggle-slider"></div>
+            </div>
+        </button>
         <section id="home">
             <h2>Welcome</h2>
             <p>Thank you for visiting my page. My name is Kevin, I am a software developer, artist, and an avid gamer.</p>
@@ -76,8 +73,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Schedulr</h3>
-                    <img src="./public/images/schedulr.png" alt="">
+                    <h3>Video Game Log</h3>
+                    <img src="./public/images/vglog.png" alt="">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, temporibus ea id iure sapiente harum quidem accusamus quo esse, laudantium nemo sint minima itaque repellendus!</p>
                     <div class="card-links">
                         <a href="">Live Deployment</a>
@@ -95,7 +92,9 @@
                 </div>
             </div>
         </section>
-        <section id="contact"></section>
+        <section id="contact">
+            <h2>Get in touch</h2>
+        </section>
     </main>
     <footer></footer>
     <script src="./app.js"></script>
