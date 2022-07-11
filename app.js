@@ -44,14 +44,13 @@ function handleActiveNav(){
     let options = {
         root: null,
         rootMargin: '0px',
-        threshold: .5
+        threshold: .6
       }
 
       let callback = (entries, observer) => {
           entries.forEach(entry => {
               if(entry.isIntersecting){
                 document.getElementById(entry.target.dataset.navItem).classList.add('active');
-                console.log(entry.target)
               }else {
                 document.getElementById(entry.target.dataset.navItem).classList.remove('active')
               }
