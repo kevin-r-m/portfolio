@@ -73,7 +73,16 @@ const modeToggle = document.querySelector(".mode-toggle");
 modeToggle.addEventListener('click', handleModeToggle);
 
 function handleModeToggle(e){
-    // e.preventDefault();
     e.stopPropagation();
     body.classList.toggle('night-mode')
 }
+
+function handleAccordion(e){
+    e.target.classList.toggle('active')
+}
+
+const accordionButtons = document.querySelectorAll('.accordion');
+
+accordionButtons.forEach(button => {
+    button.addEventListener('click', handleAccordion)
+})
