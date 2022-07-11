@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/output.css">
+    <title>Kevin McLaughlin</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item" data-destination="home">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="nav-item active" data-destination="about">
+                    <a href="#about">About me</a>
+                </li>
+                <li class="dropdown nav-item">
+                    <a href="">Things I...</a>
+                    <ul class="nested-nav-list">
+                        <li class="nav-item" data-destination="cool-things">
+                            <a href="cool-things">think are cool</a>
+                        </li>
+                        <li class="nav-item" data-destination="built-things">
+                            <a href="built-things">have built</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" data-destination="contact">
+                    <a href="">Contact</a>
+                    <ul class="nested-nav-list">
+                        <li class="nav-item" data-destination="resume">
+                            <a href="#resume">Resume</a>
+                        </li>
+                        <li class="nav-item" data-destination="email">
+                            <a href="#copy">Copy email</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome</h2>
+            <p>Thank you for visiting my page. My name is Kevin, I am a software developer, artist, and an avid gamer.</p>
+            <ul class="interest-list">
+                Here are a few things I am currently interested in:
+                <li><a href="#react">React 18</a></li>
+                <li><a href="#three-d">3d Development with Three.js </a></li>
+                <li><a href="#hunt">Videogames</a></li>
+            </ul>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <div class="side-by-side">
+                <img src="./public/images/me.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium, autem nihil reprehenderit eum eligendi tempore quos vel, cum obcaecati pariatur, ipsum totam repellendus dicta! Nisi, delectus cumque beatae voluptas ratione nam magni laudantium eum ea harum tempora, aliquam perspiciatis voluptatem explicabo quis veritatis incidunt voluptate molestiae quae facere dolor.</p>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae suscipit doloribus delectus, incidunt consectetur quae rerum at nam voluptas dolore minus nulla quisquam laboriosam dignissimos.</p>
+
+        </section>
+        <section id="cool-things"></section>
+        <section id="built-things">
+            <h2>What I have built or am working on</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Schedulr</h3>
+                    <img src="./public/images/schedulr.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, temporibus ea id iure sapiente harum quidem accusamus quo esse, laudantium nemo sint minima itaque repellendus!</p>
+                    <div class="card-links">
+                        <a href="">Live Deployment</a>
+                        <a href="">The code</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Schedulr</h3>
+                    <img src="./public/images/schedulr.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, temporibus ea id iure sapiente harum quidem accusamus quo esse, laudantium nemo sint minima itaque repellendus!</p>
+                    <div class="card-links">
+                        <a href="">Live Deployment</a>
+                        <a href="">The code</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Schedulr</h3>
+                    <img src="./public/images/schedulr.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, temporibus ea id iure sapiente harum quidem accusamus quo esse, laudantium nemo sint minima itaque repellendus!</p>
+                    <div class="card-links">
+                        <a href="">Live Deployment</a>
+                        <a href="">The code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact"></section>
+    </main>
+    <footer></footer>
+    <script src="./app.js"></script>
+</body>
+</html>
