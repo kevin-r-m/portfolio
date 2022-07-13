@@ -279,6 +279,10 @@ section {
 }
 
 #cool-things {
+
+    .thing-wrapper {
+        margin-bottom: 1rem;
+    }
     .thing-record{
         display: flex;
         align-items: center;
@@ -332,6 +336,35 @@ section {
                 right: 30px;
             }
         }
+    }
+
+    .thing-content {
+        max-width: 73%;
+        margin: 0 auto;
+        padding: 10px 30px;
+        background-color: rgb(194 182 178 / 70%);
+        border-radius: 0px 0px 15px 15px;
+        height: 0;
+        overflow-y: hidden;
+        transition: height .5s;
+
+        @media(min-width: 767px){
+            max-width: 90%;
+        }
+
+        &.active {
+            height: 175px;
+            overflow-y: scroll;
+
+            @media(min-width: 767px){
+                overflow-y: hidden;
+            }
+        }
+
+        .night-mode & {
+            background-color: rgb(59 59 59 / 70%);
+        }
+
     }
 }
 

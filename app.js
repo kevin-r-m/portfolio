@@ -78,7 +78,10 @@ function handleModeToggle(e){
 }
 
 function handleAccordion(e){
-    e.target.classList.toggle('active')
+    e.target.classList.toggle('active');
+    const target = document.getElementById(e.target.dataset.target);
+    target.classList.toggle('active');
+
 }
 
 const accordionButtons = document.querySelectorAll('.accordion');
@@ -86,3 +89,4 @@ const accordionButtons = document.querySelectorAll('.accordion');
 accordionButtons.forEach(button => {
     button.addEventListener('click', handleAccordion)
 })
+
