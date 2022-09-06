@@ -17,16 +17,11 @@
                 <li id="nav-about" class="nav-item">
                     <a href="#about">About me</a>
                 </li>
-                <li class="dropdown nav-item">
-                    <a href="">Things I...</a>
-                    <ul class="nested-nav-list">
-                        <li id="nav-cool-things" class="nav-item">
-                            <a href="#cool-things">think are cool</a>
-                        </li>
-                        <li id="nav-built-things" class="nav-item">
-                            <a href="#built-things">am working on</a>
-                        </li>
-                    </ul>
+                <li id="nav-working" class="nav-item">
+                    <a href="#working-things">Working on</a>
+                </li>
+                <li id="nav-interested" class="nav-item">
+                    <a href="#interested-things">Interested in</a>
                 </li>
                 <li id="nav-contact" class="nav-item">
                     <a href="#contact">Contact</a>
@@ -40,27 +35,34 @@
                 <div class="toggle-slider"></div>
             </div>
         </button>
+        <div class="graphic-container">
+            
+        </div>
         <section id="home" data-nav-item="nav-home">
-            <h2>Welcome</h2>
-            <p>Thank you for visiting my page. My name is Kevin, I am a software developer, artist, and an avid gamer.</p>
+            <h1>Welcome</h1>
+            <p>Hey, thanks for visiting my page. There are links below to jump into something otherwise please explore and get in touch if you'd like.</p>
             <ul class="interest-list">
-                Here are a few things that have caught my interest lately:
-                <li><a href="/interested#interested-1">React Deep Dive</a></li>
-                <li><a href="/interested#interested-2">3d Development with Three.js </a></li>
-                <li><a href="/interested#interested-3">Battlefield 2042</a></li>
+                Here are a few things (usually coding related, sometimes videogames) that have caught my interest lately:
+                <li><a href="#interested-1">React Deep Dive</a></li>
+                <li><a href="#interested-2">3D Development with Three.js </a></li>
+                <li><a href="#interested-3">Hunt: Showdown</a></li>
             </ul>
         </section>
         <section id="about" data-nav-item="nav-about">
-            <h2>Who am I</h2>
+            <h2>Who I am and what's going on</h2>
             <div class="side-by-side">
-                <img src="./public/images/me.png" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium, autem nihil reprehenderit eum eligendi tempore quos vel, cum obcaecati pariatur, ipsum totam repellendus dicta! Nisi, delectus cumque beatae voluptas ratione nam magni laudantium eum ea harum tempora, aliquam perspiciatis voluptatem explicabo quis veritatis incidunt voluptate molestiae quae facere dolor.</p>
+                <img src="./public/images/me.jpeg" alt="">
+                <div>
+                    <p>My name is Kevin, I am a software developer, artist, and an avid gamer. I currently work as a developer at FCB Health NY, we are focused on building sites and web applications for the healthcare industry. Outside of coding, I like to play video games, draw, and spend time outdoors with my family.</p>
+                    <p>I just set-up a new portfolio for some of my artwork which can be seen <a href="/" target="_blank">here</a>. I also recently went on a trip to Europe with my (now) fianceè which is where the picture to our left came from. We went to Amsterdam, Berlin, and Ireland, it was great.</p>
+                </div>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae suscipit doloribus delectus, incidunt consectetur quae rerum at nam voluptas dolore minus nulla quisquam laboriosam dignissimos.</p>
+            <p>If you are interested in learning more about my professional experience, please see my resume <a href="/" target="_blank">here</a>.</p>
 
         </section>
-        <section id="built-things" data-nav-item="nav-built-things">
-            <h2>Things I am working on</h2>
+        <section id="working-things" data-nav-item="nav-working">
+            <h2>Personal Projects</h2>
+
             <div class="cards-container">
                 <div class="card">
                     <h3>Schedulr</h3>
@@ -91,9 +93,9 @@
                 </div>
             </div>
         </section>
-        <section id="cool-things" data-nav-item="nav-cool-things">
+        <section id="interested-things" data-nav-item="nav-interested">
             <h2>Going on with me</h2>
-            <div class="cool-things-container">
+            <div class="interested-things-container">
                 <div class="thing-wrapper">
                     <div class="thing-record">
                         <img src="./public/images/reactjs-logo.png" alt="">
@@ -121,12 +123,15 @@
                 <div class="thing-wrapper">
                     <div class="thing-record">
                         <img src="./public/images/videogame-icon.png" alt="">
-                        <h3>Battlefield 2042</h3>
+                        <h3>Hunt: Showdown</h3>
                         <button class="accordion" data-target="thing-3"></button>
                     </div>
                     <div id="thing-3" class="thing-content">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur a velit, explicabo deleniti numquam eligendi voluptate sunt eaque minus quis commodi saepe sint tempora fugiat, nostrum, doloribus praesentium totam ad. Porro libero exercitationem quos, eaque cupiditate natus odio corrupti, perspiciatis excepturi qui consequuntur sequi, officiis repudiandae! Cumque numquam labore unde!
+                            If you're someone who follows video games, even slightly, you have likely heard about Battlefield 2042. Battlefield has received a lot of negative reviews by critics and players alike. Myself, at a time and sometimes even still, was on the critical side. The game had issues and in a lot of ways it still does; poor design choices, riddled with bugs, and perhaps most felt throughout the community, was a departure from the Battlefield formula. However, with all of that said, it has become a game that I really enjoy playing, maybe even my favorite right now.
+                        </p>
+                        <p>
+                            I've really only played the more recent installments, back to Battlefield 1 such as Battlefield 1 and Battlefiled 5. Call of Duty was more popular among my friend group so that is what I mostly played. 
                         </p>
                     </div>
                 </div>

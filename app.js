@@ -9,24 +9,6 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () 
     body.classList.toggle('night-mode')
 });
 
-const dropDown = document.querySelector(".dropdown");
-const dropDownList = document.querySelector(".nested-nav-list");
-
-dropDown.addEventListener('click', handleDropDown);
-
-function handleDropDown(e) {
-    e.preventDefault();
-    dropDown.classList.toggle('active');
-    dropDownList.classList.toggle('active');
-}
-
-// document.addEventListener('click', function(e){
-//     if(!e.target.closest(".nav-list")){
-//         handleDropDown(e);
-//     }
-// })
-
-
 function handleNav(){
 
     handleActiveNav();
@@ -49,7 +31,7 @@ function handleActiveNav(){
 
       let callback = (entries, observer) => {
           entries.forEach(entry => {
-              if(entry.isIntersecting){
+              if(entry.isIntersecting && window.scrollY != 0){
                 document.getElementById(entry.target.dataset.navItem).classList.add('active');
               }else {
                 document.getElementById(entry.target.dataset.navItem).classList.remove('active')
